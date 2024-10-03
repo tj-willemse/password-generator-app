@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <section class="main-menu-box container">
+      <h3 class="header-title">Password Generator</h3>
+      <div class="password-main-box container">
+        <p class="password" id="generated-password"></p>
+        <img
+          src="./public/icon-copy.svg"
+          alt="copy-icon"
+          class="copy-icon"
+          id="icon-copy"
+        />
+      </div>
+
+      <div class="main-menu-box-two container">
+        <div class="slider-box">
+          <label for="slider" class="slider-text">Character Length</label>
+          <span id="sliderValue" class="slider-number">0</span>
+        </div>
+        <input
+          class="slider-tool"
+          type="range"
+          id="slider"
+          min="0"
+          max="20"
+          value="0"
+        />
+
+        <ul class="list-items-box">
+          <div class="list-items-box-two">
+            <div class="list-icon-box">
+              <img
+                src="./public/icon-check.svg"
+                alt="checkmark"
+                class="checkmark-icon"
+                id="uppercase"
+              />
+            </div>
+            <li class="list-items">Include Uppercase Letters</li>
+          </div>
+
+          <div class="list-items-box-two">
+            <div class="list-icon-box">
+              <img
+                src="./public/icon-check.svg"
+                alt="checkmark"
+                class="checkmark-icon"
+                id="lowercase"
+              />
+            </div>
+            <li class="list-items">Include Lowercase Letters</li>
+          </div>
+
+          <div class="list-items-box-two">
+            <div class="list-icon-box">
+              <img
+                src="./public/icon-check.svg"
+                alt="checkmark"
+                class="checkmark-icon"
+                id="numbers"
+              />
+            </div>
+            <li class="list-items">Include Numbers</li>
+          </div>
+
+          <div class="list-items-box-two">
+            <div class="list-icon-box">
+              <img
+                src="./public/icon-check.svg"
+                alt="checkmark"
+                class="checkmark-icon"
+                id="symbols"
+              />
+            </div>
+            <li class="list-items">Include Symbols</li>
+          </div>
+        </ul>
+
+        <div class="strength-main-box">
+          <p class="strength-title">Strength</p>
+          <div class="strength-boxes-style">
+            <p class="strength-text" id="strength-text-updated-one" hidden>
+              TO WEAK!
+            </p>
+            <p class="strength-text" id="strength-text-updated-two" hidden>
+              WEAK
+            </p>
+            <p class="strength-text" id="strength-text-updated-three" hidden>
+              MEDIUM
+            </p>
+            <p class="strength-text" id="strength-text-updated-four" hidden>
+              STRONG
+            </p>
+            <div class="strength-boxes" id="box-one"></div>
+            <div class="strength-boxes" id="box-two"></div>
+            <div class="strength-boxes" id="box-three"></div>
+            <div class="strength-boxes" id="box-four"></div>
+          </div>
+        </div>
+
+        <div class="generate-button-box">
+          <button class="generate-button">Generate</button>
+          <img src="./public/icon-arrow-right.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
